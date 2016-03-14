@@ -1,10 +1,11 @@
-function Entry (title, body) {
+exports.Entry = function(title, body) {
   this.title = title;
   this.body = body;
 };
 
-Entry.prototype.numberOfWords = function () {
-  return Entry.length;
+exports.Entry.prototype.numberOfWords = function () {
+  var words = Entry.split(" ");
+  return words.length;
 };
 
 
