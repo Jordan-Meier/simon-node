@@ -1,1 +1,27 @@
-!function r(n,t,e){function o(u,f){if(!t[u]){if(!n[u]){var a="function"==typeof require&&require;if(!f&&a)return a(u,!0);if(i)return i(u,!0);var l=new Error("Cannot find module '"+u+"'");throw l.code="MODULE_NOT_FOUND",l}var c=t[u]={exports:{}};n[u][0].call(c.exports,function(r){var t=n[u][1][r];return o(t?t:r)},c,c.exports,r,n,t,e)}return t[u].exports}for(var i="function"==typeof require&&require,u=0;u<e.length;u++)o(e[u]);return o}({1:[function(r,n,t){t.Entry=function(r,n){this.title=r,this.body=n},t.Entry.prototype.numberOfWords=function(){var r=Entry.split(" ");return r.length}},{}],2:[function(r,n,t){var e=r("./../js/journal.js").Entry;$(document).ready(function(){$("#journal").submit(function(r){r.preventDefault();var n=$("#title").val(),t=$("#body").val(),o=new e(n,t);$("#entry").append("<li>"+o.title+"</li>"),$("#entry").append("<li>"+o.body+"</li>")})})},{"./../js/journal.js":1}]},{},[2]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+exports.Entry = function(title, body) {
+  this.title = title;
+  this.body = body;
+};
+
+exports.Entry.prototype.numberOfWords = function () {
+  var words = this.body.split(" ");
+  return words.length;
+};
+
+},{}],2:[function(require,module,exports){
+var Entry = require('./../js/journal.js').Entry;
+
+$(document).ready(function(){
+  $('#journal').submit(function(event){
+    event.preventDefault();
+    var title = $('#title').val();
+    var body = $('#body').val();
+    var entry = new Entry(title, body);
+      $('#entry').append("<li>" + entry.title + "</li>");
+      $('#entry').append("<li>" + entry.body + "</li>");
+      $('#entry').append("<li> Number of words in entry: " + entry.numberOfWords() + "</li>");
+    });
+  });
+
+},{"./../js/journal.js":1}]},{},[2]);
