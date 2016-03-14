@@ -1,6 +1,4 @@
 var pingPong = require('./ping-pong.js').pingPong;
-
-
 var prompt = require('prompt');
 prompt.start();
 
