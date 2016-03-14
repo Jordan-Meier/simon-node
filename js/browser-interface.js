@@ -8,5 +8,6 @@ $(document).ready(function(){
     var entry = new Entry(title, body);
       $('#entry').append("<li>" + entry.title + "</li>");
       $('#entry').append("<li>" + entry.body + "</li>");
+      $('#entry').append("<li> Number of words in entry: " + entry.numberOfWords() + "</li>");
     });
   });
