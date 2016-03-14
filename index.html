@@ -3,18 +3,22 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Journal</title>
+    <title>Simon</title>
   </head>
   <body>
-    <form id="journal">
-      <label for="title">Title:</label>
-      <input id="title" type="text">
-
-      <label for="body">Body:</label>
-      <input id="body" type="text">
-      <button type="submit">Submit</button>
+    <form id="red">
+      <button value="1" type="submit">RED</button>
+    </form>
+    <form id="green">
+      <button value="2" type="submit">GREEN</button>
+    </form>
+    <form id="blue">
+      <button value="3" type="submit">BLUE</button>
+    </form>
+    <form id="yellow">
+      <button value="4" type="submit">YELLOW</button>
     </form>
 
-    <ul id="entry"></ul>
+    <ul id="results"></ul>
   </body>
 </html>
