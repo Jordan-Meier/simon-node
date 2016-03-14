@@ -1,4 +1,4 @@
-var pingPong = require('./ping-pong.js').pingPong;
+var journal = require('./journal.js').Entry;
 var prompt = require('prompt');
 prompt.start();
 

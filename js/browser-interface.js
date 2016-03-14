@@ -1,12 +1,12 @@
-var journal = require('./../js/journal.js').journal;
+var Entry = require('./../js/journal.js').Entry;
 
 $(document).ready(function(){
-  $('#ping-pong').submit(function(event){
+  $('#journal').submit(function(event){
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element){
-      $('#solution').append("<li>" + element + "</li>");
+    var title = $('#title').val();
+    var body = $('#body').val();
+    var entry = new Entry(title, body);
+      $('#entry').append("<li>" + entry.title + "</li>");
+      $('#entry').append("<li>" + entry.body + "</li>");
     });
   });
-});
