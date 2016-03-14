@@ -4,6 +4,6 @@ exports.Entry = function(title, body) {
 };
 
 exports.Entry.prototype.numberOfWords = function () {
-  var words = Entry.split(" ");
+  var words = this.body.split(" ");
   return words.length;
 };
