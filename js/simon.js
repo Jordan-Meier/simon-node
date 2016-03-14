@@ -6,7 +6,10 @@ exports.Simon = function (sequence) {
 
 exports.Simon.prototype.isMatch = function () {
   //function that determines whether or not user input matches simon sequence
+  var userTurn;
+  if(userTurn === randomNumber){
 
+  }
 };
 
 var chosenColor = [];
@@ -23,9 +26,6 @@ exports.Simon.prototype.sequenceGenerator = function (){
   } else (randomNumber === 4){
     newColor = "YELLOW";
   }
-
-
-
 
   chosenColor.push(newColor)
 };
