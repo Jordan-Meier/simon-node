@@ -1,11 +1,19 @@
 var Simon = require('./../js/simon.js').Simon;
 
-$(document).ready(function(){
-  var newGame = new Simon();
-  $('#temp').submit(function(event){
+// $(document).ready(function(){
+//   var newGame = new Simon();
+//   $('#temp').submit(function(event){
+//     event.preventDefault();
+//     newGame.sequenceGenerator();
+//     console.log(newGame.sequence);
+//
+//     });
+//   });
+
+
+$(document).ready(function () {
     event.preventDefault();
-    newGame.sequenceGenerator();
-    console.log(newGame.sequence);
+    $('#red').submit(function(event){
 
     });
-  });
+});
